@@ -1,0 +1,41 @@
+"use strict";
+
+		$(document).on("click", ".EXLRequestTab > a ", function() { 
+		
+var abc = document.createElement("a");
+var linkText = document.createTextNode("InterLibrary Loan Request");
+abc.appendChild(linkText);
+abc.setAttribute('id','abclink');
+abc.setAttribute('class','abcclass');
+abc.setAttribute('target','_blank');
+abc.title = "";
+abc.href = "https://illiad.tulane.edu/";
+
+setTimeout(functionxxx, 1500);
+function functionxxx() {
+    //window.alert('Hello!');   
+   
+var x = document.getElementsByClassName("selected EXLRequestSelectedServiceTitle");
+
+var y = document.getElementsByClassName("selected EXLRequestSelectedServiceTitle");
+
+//alert(yy);
+
+for (i=0;i<=y.length;i++){
+	var yy=y[i].innerHTML;
+		if (yy=="Request Delivery")
+			{
+				
+			}
+		else
+		{
+			var liToKill = x[i].parentNode.parentNode.lastChild;
+			liToKill.parentNode.removeChild( liToKill );
+			//window.alert("Take care, interlibrary!");     
+			//var x = document.getElementsByClassName("selected EXLRequestSelectedServiceTitle");  
+			x[i].parentElement.parentElement.appendChild(abc).style.border = "thin solid #8fb9d0";
+		}
+	}
+};
+
+});
